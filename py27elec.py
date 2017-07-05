@@ -21,6 +21,8 @@ class Py27elec:
 	def i_by_vr(self, v ,r ):
 		return v / r 					# Ampare
 
+	def v_by_ir(self, i ,r ):
+		return i *  r 					# Volt
 
 if __name__ == "__main__" : 
 	p27e = Py27elec()
@@ -39,4 +41,8 @@ if __name__ == "__main__" :
 
 	i  = p27e.i_by_vr(5.0,r4s)
 	print "i = %f" % i 
+
+	#V = p27e.v_by_ir( 2.0 / 1000, 4500.0 )
+	V = p27e.v_by_ir(  i  ,  r4s )
+	print "V = %f" % V 	
 
